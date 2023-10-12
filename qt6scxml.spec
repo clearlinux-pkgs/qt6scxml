@@ -4,10 +4,10 @@
 # Using build pattern: cmake
 #
 Name     : qt6scxml
-Version  : 6.5.3
-Release  : 1
-URL      : https://download.qt.io/official_releases/qt/6.5/6.5.3/submodules/qtscxml-everywhere-src-6.5.3.tar.xz
-Source0  : https://download.qt.io/official_releases/qt/6.5/6.5.3/submodules/qtscxml-everywhere-src-6.5.3.tar.xz
+Version  : 6.6.0
+Release  : 2
+URL      : https://download.qt.io/official_releases/qt/6.6/6.6.0/submodules/qtscxml-everywhere-src-6.6.0.tar.xz
+Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.0/submodules/qtscxml-everywhere-src-6.6.0.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-3.0
@@ -63,15 +63,15 @@ license components for the qt6scxml package.
 
 
 %prep
-%setup -q -n qtscxml-everywhere-src-6.5.3
-cd %{_builddir}/qtscxml-everywhere-src-6.5.3
+%setup -q -n qtscxml-everywhere-src-6.6.0
+cd %{_builddir}/qtscxml-everywhere-src-6.6.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1696368181
+export SOURCE_DATE_EPOCH=1697149219
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -107,7 +107,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1696368181
+export SOURCE_DATE_EPOCH=1697149219
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6scxml
 cp %{_builddir}/qtscxml-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6scxml/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -135,19 +135,19 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/QtScxml/6.5.3/QtScxml/private/qscxmlcompiler_p.h
-/usr/include/QtScxml/6.5.3/QtScxml/private/qscxmlcppdatamodel_p.h
-/usr/include/QtScxml/6.5.3/QtScxml/private/qscxmldatamodel_p.h
-/usr/include/QtScxml/6.5.3/QtScxml/private/qscxmldatamodelplugin_p.h
-/usr/include/QtScxml/6.5.3/QtScxml/private/qscxmlevent_p.h
-/usr/include/QtScxml/6.5.3/QtScxml/private/qscxmlexecutablecontent_p.h
-/usr/include/QtScxml/6.5.3/QtScxml/private/qscxmlglobals_p.h
-/usr/include/QtScxml/6.5.3/QtScxml/private/qscxmlinvokableservice_p.h
-/usr/include/QtScxml/6.5.3/QtScxml/private/qscxmlstatemachine_p.h
-/usr/include/QtScxml/6.5.3/QtScxml/private/qscxmlstatemachineinfo_p.h
-/usr/include/QtScxml/6.5.3/QtScxml/private/qscxmltabledata_p.h
-/usr/include/QtScxml/6.5.3/QtScxml/private/qtscxml-config_p.h
-/usr/include/QtScxml/6.5.3/QtScxml/private/qtscxmlexports_p.h
+/usr/include/QtScxml/6.6.0/QtScxml/private/qscxmlcompiler_p.h
+/usr/include/QtScxml/6.6.0/QtScxml/private/qscxmlcppdatamodel_p.h
+/usr/include/QtScxml/6.6.0/QtScxml/private/qscxmldatamodel_p.h
+/usr/include/QtScxml/6.6.0/QtScxml/private/qscxmldatamodelplugin_p.h
+/usr/include/QtScxml/6.6.0/QtScxml/private/qscxmlevent_p.h
+/usr/include/QtScxml/6.6.0/QtScxml/private/qscxmlexecutablecontent_p.h
+/usr/include/QtScxml/6.6.0/QtScxml/private/qscxmlglobals_p.h
+/usr/include/QtScxml/6.6.0/QtScxml/private/qscxmlinvokableservice_p.h
+/usr/include/QtScxml/6.6.0/QtScxml/private/qscxmlstatemachine_p.h
+/usr/include/QtScxml/6.6.0/QtScxml/private/qscxmlstatemachineinfo_p.h
+/usr/include/QtScxml/6.6.0/QtScxml/private/qscxmltabledata_p.h
+/usr/include/QtScxml/6.6.0/QtScxml/private/qtscxml-config_p.h
+/usr/include/QtScxml/6.6.0/QtScxml/private/qtscxmlexports_p.h
 /usr/include/QtScxml/QScxmlCompiler
 /usr/include/QtScxml/QScxmlCppDataModel
 /usr/include/QtScxml/QScxmlDataModel
@@ -177,18 +177,18 @@ popd
 /usr/include/QtScxml/qtscxml-config.h
 /usr/include/QtScxml/qtscxmlexports.h
 /usr/include/QtScxml/qtscxmlversion.h
-/usr/include/QtStateMachine/6.5.3/QtStateMachine/private/qabstractstate_p.h
-/usr/include/QtStateMachine/6.5.3/QtStateMachine/private/qabstracttransition_p.h
-/usr/include/QtStateMachine/6.5.3/QtStateMachine/private/qbasickeyeventtransition_p.h
-/usr/include/QtStateMachine/6.5.3/QtStateMachine/private/qbasicmouseeventtransition_p.h
-/usr/include/QtStateMachine/6.5.3/QtStateMachine/private/qeventtransition_p.h
-/usr/include/QtStateMachine/6.5.3/QtStateMachine/private/qfinalstate_p.h
-/usr/include/QtStateMachine/6.5.3/QtStateMachine/private/qhistorystate_p.h
-/usr/include/QtStateMachine/6.5.3/QtStateMachine/private/qsignaleventgenerator_p.h
-/usr/include/QtStateMachine/6.5.3/QtStateMachine/private/qsignaltransition_p.h
-/usr/include/QtStateMachine/6.5.3/QtStateMachine/private/qstate_p.h
-/usr/include/QtStateMachine/6.5.3/QtStateMachine/private/qstatemachine_p.h
-/usr/include/QtStateMachine/6.5.3/QtStateMachine/private/qtstatemachine-config_p.h
+/usr/include/QtStateMachine/6.6.0/QtStateMachine/private/qabstractstate_p.h
+/usr/include/QtStateMachine/6.6.0/QtStateMachine/private/qabstracttransition_p.h
+/usr/include/QtStateMachine/6.6.0/QtStateMachine/private/qbasickeyeventtransition_p.h
+/usr/include/QtStateMachine/6.6.0/QtStateMachine/private/qbasicmouseeventtransition_p.h
+/usr/include/QtStateMachine/6.6.0/QtStateMachine/private/qeventtransition_p.h
+/usr/include/QtStateMachine/6.6.0/QtStateMachine/private/qfinalstate_p.h
+/usr/include/QtStateMachine/6.6.0/QtStateMachine/private/qhistorystate_p.h
+/usr/include/QtStateMachine/6.6.0/QtStateMachine/private/qsignaleventgenerator_p.h
+/usr/include/QtStateMachine/6.6.0/QtStateMachine/private/qsignaltransition_p.h
+/usr/include/QtStateMachine/6.6.0/QtStateMachine/private/qstate_p.h
+/usr/include/QtStateMachine/6.6.0/QtStateMachine/private/qstatemachine_p.h
+/usr/include/QtStateMachine/6.6.0/QtStateMachine/private/qtstatemachine-config_p.h
 /usr/include/QtStateMachine/QAbstractState
 /usr/include/QtStateMachine/QAbstractTransition
 /usr/include/QtStateMachine/QEventTransition
@@ -252,9 +252,9 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libQt6Scxml.so.6
-/usr/lib64/libQt6Scxml.so.6.5.3
+/usr/lib64/libQt6Scxml.so.6.6.0
 /usr/lib64/libQt6StateMachine.so.6
-/usr/lib64/libQt6StateMachine.so.6.5.3
+/usr/lib64/libQt6StateMachine.so.6.6.0
 
 %files libexec
 %defattr(-,root,root,-)
