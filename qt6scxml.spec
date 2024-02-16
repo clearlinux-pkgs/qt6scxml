@@ -7,7 +7,7 @@
 #
 Name     : qt6scxml
 Version  : 6.6.2
-Release  : 9
+Release  : 10
 URL      : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtscxml-everywhere-src-6.6.2.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtscxml-everywhere-src-6.6.2.tar.xz
 Summary  : No detailed summary available
