@@ -1,4 +1,5 @@
 libQt6Core.so.6
 libQt6Gui.so.6
+libQt6Qml.so.6
 libc.so.6
 libstdc++.so.6

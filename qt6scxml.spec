@@ -7,7 +7,7 @@
 #
 Name     : qt6scxml
 Version  : 6.6.3
-Release  : 12
+Release  : 13
 URL      : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtscxml-everywhere-src-6.6.3.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtscxml-everywhere-src-6.6.3.tar.xz
 Summary  : No detailed summary available
@@ -18,6 +18,7 @@ Requires: qt6scxml-libexec = %{version}-%{release}
 Requires: qt6scxml-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : qt6base-dev
+BuildRequires : qt6declarative-dev
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -72,7 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1711486852
+export SOURCE_DATE_EPOCH=1711487449
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -133,7 +134,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1711486852
+export SOURCE_DATE_EPOCH=1711487449
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6scxml
 cp %{_builddir}/qtscxml-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6scxml/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -201,6 +202,17 @@ popd
 /usr/include/QtScxml/qtscxml-config.h
 /usr/include/QtScxml/qtscxmlexports.h
 /usr/include/QtScxml/qtscxmlversion.h
+/usr/include/QtScxmlQml/6.6.3/QtScxmlQml/private/eventconnection_p.h
+/usr/include/QtScxmlQml/6.6.3/QtScxmlQml/private/invokedservices_p.h
+/usr/include/QtScxmlQml/6.6.3/QtScxmlQml/private/qscxmlqmlglobals_p.h
+/usr/include/QtScxmlQml/6.6.3/QtScxmlQml/private/qtscxmlqmlexports_p.h
+/usr/include/QtScxmlQml/6.6.3/QtScxmlQml/private/statemachineextended_p.h
+/usr/include/QtScxmlQml/6.6.3/QtScxmlQml/private/statemachineloader_p.h
+/usr/include/QtScxmlQml/QtScxmlQml
+/usr/include/QtScxmlQml/QtScxmlQmlDepends
+/usr/include/QtScxmlQml/QtScxmlQmlVersion
+/usr/include/QtScxmlQml/qtscxmlqmlexports.h
+/usr/include/QtScxmlQml/qtscxmlqmlversion.h
 /usr/include/QtStateMachine/6.6.3/QtStateMachine/private/qabstractstate_p.h
 /usr/include/QtStateMachine/6.6.3/QtStateMachine/private/qabstracttransition_p.h
 /usr/include/QtStateMachine/6.6.3/QtStateMachine/private/qbasickeyeventtransition_p.h
@@ -240,7 +252,39 @@ popd
 /usr/include/QtStateMachine/qtstatemachine-config.h
 /usr/include/QtStateMachine/qtstatemachineexports.h
 /usr/include/QtStateMachine/qtstatemachineversion.h
+/usr/include/QtStateMachineQml/6.6.3/QtStateMachineQml/private/childrenprivate_p.h
+/usr/include/QtStateMachineQml/6.6.3/QtStateMachineQml/private/finalstate_p.h
+/usr/include/QtStateMachineQml/6.6.3/QtStateMachineQml/private/qstatemachineqmlglobals_p.h
+/usr/include/QtStateMachineQml/6.6.3/QtStateMachineQml/private/qtstatemachineqmlexports_p.h
+/usr/include/QtStateMachineQml/6.6.3/QtStateMachineQml/private/signaltransition_p.h
+/usr/include/QtStateMachineQml/6.6.3/QtStateMachineQml/private/state_p.h
+/usr/include/QtStateMachineQml/6.6.3/QtStateMachineQml/private/statemachine_p.h
+/usr/include/QtStateMachineQml/6.6.3/QtStateMachineQml/private/statemachineforeign_p.h
+/usr/include/QtStateMachineQml/6.6.3/QtStateMachineQml/private/timeouttransition_p.h
+/usr/include/QtStateMachineQml/QtStateMachineQml
+/usr/include/QtStateMachineQml/QtStateMachineQmlDepends
+/usr/include/QtStateMachineQml/QtStateMachineQmlVersion
+/usr/include/QtStateMachineQml/qtstatemachineqmlexports.h
+/usr/include/QtStateMachineQml/qtstatemachineqmlversion.h
 /usr/lib64/cmake/Qt6BuildInternals/StandaloneTests/QtScxmlTestsConfig.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6declarative_scxmlAdditionalTargetInfo.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6declarative_scxmlConfig.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6declarative_scxmlConfigVersion.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6declarative_scxmlConfigVersionImpl.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6declarative_scxmlTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6declarative_scxmlTargets.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlstatemachineAdditionalTargetInfo.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlstatemachineConfig.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlstatemachineConfigVersion.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlstatemachineConfigVersionImpl.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlstatemachineTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlstatemachineTargets.cmake
+/usr/lib64/cmake/Qt6Scxml/Qt6QScxmlEcmaScriptDataModelPluginAdditionalTargetInfo.cmake
+/usr/lib64/cmake/Qt6Scxml/Qt6QScxmlEcmaScriptDataModelPluginConfig.cmake
+/usr/lib64/cmake/Qt6Scxml/Qt6QScxmlEcmaScriptDataModelPluginConfigVersion.cmake
+/usr/lib64/cmake/Qt6Scxml/Qt6QScxmlEcmaScriptDataModelPluginConfigVersionImpl.cmake
+/usr/lib64/cmake/Qt6Scxml/Qt6QScxmlEcmaScriptDataModelPluginTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/Qt6Scxml/Qt6QScxmlEcmaScriptDataModelPluginTargets.cmake
 /usr/lib64/cmake/Qt6Scxml/Qt6ScxmlAdditionalTargetInfo.cmake
 /usr/lib64/cmake/Qt6Scxml/Qt6ScxmlConfig.cmake
 /usr/lib64/cmake/Qt6Scxml/Qt6ScxmlConfigVersion.cmake
@@ -251,6 +295,14 @@ popd
 /usr/lib64/cmake/Qt6Scxml/Qt6ScxmlTargets-relwithdebinfo.cmake
 /usr/lib64/cmake/Qt6Scxml/Qt6ScxmlTargets.cmake
 /usr/lib64/cmake/Qt6Scxml/Qt6ScxmlVersionlessTargets.cmake
+/usr/lib64/cmake/Qt6ScxmlQml/Qt6ScxmlQmlAdditionalTargetInfo.cmake
+/usr/lib64/cmake/Qt6ScxmlQml/Qt6ScxmlQmlConfig.cmake
+/usr/lib64/cmake/Qt6ScxmlQml/Qt6ScxmlQmlConfigVersion.cmake
+/usr/lib64/cmake/Qt6ScxmlQml/Qt6ScxmlQmlConfigVersionImpl.cmake
+/usr/lib64/cmake/Qt6ScxmlQml/Qt6ScxmlQmlDependencies.cmake
+/usr/lib64/cmake/Qt6ScxmlQml/Qt6ScxmlQmlTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/Qt6ScxmlQml/Qt6ScxmlQmlTargets.cmake
+/usr/lib64/cmake/Qt6ScxmlQml/Qt6ScxmlQmlVersionlessTargets.cmake
 /usr/lib64/cmake/Qt6ScxmlTools/Qt6ScxmlToolsAdditionalTargetInfo.cmake
 /usr/lib64/cmake/Qt6ScxmlTools/Qt6ScxmlToolsConfig.cmake
 /usr/lib64/cmake/Qt6ScxmlTools/Qt6ScxmlToolsConfigVersion.cmake
@@ -267,30 +319,68 @@ popd
 /usr/lib64/cmake/Qt6StateMachine/Qt6StateMachineTargets-relwithdebinfo.cmake
 /usr/lib64/cmake/Qt6StateMachine/Qt6StateMachineTargets.cmake
 /usr/lib64/cmake/Qt6StateMachine/Qt6StateMachineVersionlessTargets.cmake
+/usr/lib64/cmake/Qt6StateMachineQml/Qt6StateMachineQmlAdditionalTargetInfo.cmake
+/usr/lib64/cmake/Qt6StateMachineQml/Qt6StateMachineQmlConfig.cmake
+/usr/lib64/cmake/Qt6StateMachineQml/Qt6StateMachineQmlConfigVersion.cmake
+/usr/lib64/cmake/Qt6StateMachineQml/Qt6StateMachineQmlConfigVersionImpl.cmake
+/usr/lib64/cmake/Qt6StateMachineQml/Qt6StateMachineQmlDependencies.cmake
+/usr/lib64/cmake/Qt6StateMachineQml/Qt6StateMachineQmlTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/Qt6StateMachineQml/Qt6StateMachineQmlTargets.cmake
+/usr/lib64/cmake/Qt6StateMachineQml/Qt6StateMachineQmlVersionlessTargets.cmake
 /usr/lib64/libQt6Scxml.prl
 /usr/lib64/libQt6Scxml.so
+/usr/lib64/libQt6ScxmlQml.prl
+/usr/lib64/libQt6ScxmlQml.so
 /usr/lib64/libQt6StateMachine.prl
 /usr/lib64/libQt6StateMachine.so
+/usr/lib64/libQt6StateMachineQml.prl
+/usr/lib64/libQt6StateMachineQml.so
 /usr/lib64/pkgconfig/Qt6Scxml.pc
+/usr/lib64/pkgconfig/Qt6ScxmlQml.pc
 /usr/lib64/pkgconfig/Qt6StateMachine.pc
+/usr/lib64/pkgconfig/Qt6StateMachineQml.pc
 /usr/lib64/qt6/mkspecs/features/qscxmlc.prf
 /usr/lib64/qt6/mkspecs/modules/qt_lib_scxml.pri
 /usr/lib64/qt6/mkspecs/modules/qt_lib_scxml_private.pri
+/usr/lib64/qt6/mkspecs/modules/qt_lib_scxmlqml.pri
+/usr/lib64/qt6/mkspecs/modules/qt_lib_scxmlqml_private.pri
 /usr/lib64/qt6/mkspecs/modules/qt_lib_statemachine.pri
 /usr/lib64/qt6/mkspecs/modules/qt_lib_statemachine_private.pri
+/usr/lib64/qt6/mkspecs/modules/qt_lib_statemachineqml.pri
+/usr/lib64/qt6/mkspecs/modules/qt_lib_statemachineqml_private.pri
 
 %files lib
 %defattr(-,root,root,-)
 /V3/usr/lib64/libQt6Scxml.so.6.6.3
+/V3/usr/lib64/libQt6ScxmlQml.so.6.6.3
 /V3/usr/lib64/libQt6StateMachine.so.6.6.3
+/V3/usr/lib64/libQt6StateMachineQml.so.6.6.3
+/V3/usr/lib64/qt6/plugins/scxmldatamodel/libqscxmlecmascriptdatamodel.so
+/V3/usr/lib64/qt6/qml/QtQml/StateMachine/libqtqmlstatemachineplugin.so
+/V3/usr/lib64/qt6/qml/QtScxml/libdeclarative_scxmlplugin.so
 /usr/lib64/libQt6Scxml.so.6
 /usr/lib64/libQt6Scxml.so.6.6.3
+/usr/lib64/libQt6ScxmlQml.so.6
+/usr/lib64/libQt6ScxmlQml.so.6.6.3
 /usr/lib64/libQt6StateMachine.so.6
 /usr/lib64/libQt6StateMachine.so.6.6.3
+/usr/lib64/libQt6StateMachineQml.so.6
+/usr/lib64/libQt6StateMachineQml.so.6.6.3
 /usr/lib64/qt6/metatypes/qt6scxml_relwithdebinfo_metatypes.json
+/usr/lib64/qt6/metatypes/qt6scxmlqml_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/metatypes/qt6statemachine_relwithdebinfo_metatypes.json
+/usr/lib64/qt6/metatypes/qt6statemachineqml_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/modules/Scxml.json
+/usr/lib64/qt6/modules/ScxmlQml.json
 /usr/lib64/qt6/modules/StateMachine.json
+/usr/lib64/qt6/modules/StateMachineQml.json
+/usr/lib64/qt6/plugins/scxmldatamodel/libqscxmlecmascriptdatamodel.so
+/usr/lib64/qt6/qml/QtQml/StateMachine/libqtqmlstatemachineplugin.so
+/usr/lib64/qt6/qml/QtQml/StateMachine/plugins.qmltypes
+/usr/lib64/qt6/qml/QtQml/StateMachine/qmldir
+/usr/lib64/qt6/qml/QtScxml/libdeclarative_scxmlplugin.so
+/usr/lib64/qt6/qml/QtScxml/plugins.qmltypes
+/usr/lib64/qt6/qml/QtScxml/qmldir
 
 %files libexec
 %defattr(-,root,root,-)
