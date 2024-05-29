@@ -1,3 +1,4 @@
+libQt6Scxml.so.6:NonQt
 libQt6Scxml.so.6:Qt_6
 libQt6Scxml.so.6:Qt_6_PRIVATE_API
 libQt6Scxml.so.6:_ZN11QScxmlErrorC1ERK7QStringiiS2_
@@ -396,6 +397,7 @@ libQt6Scxml.so.6:_ZNK29QScxmlInvokableServiceFactory10parametersEv
 libQt6Scxml.so.6:_ZNK29QScxmlInvokableServiceFactory5namesEv
 libQt6Scxml.so.6:_ZNK31QScxmlStaticScxmlServiceFactory10metaObjectEv
 libQt6Scxml.so.6:_ZNK32QScxmlDynamicScxmlServiceFactory10metaObjectEv
+libQt6ScxmlQml.so.6:NonQt
 libQt6ScxmlQml.so.6:Qt_6
 libQt6ScxmlQml.so.6:Qt_6_PRIVATE_API
 libQt6ScxmlQml.so.6:_Z26qml_register_types_QtScxmlv
@@ -464,6 +466,7 @@ libQt6ScxmlQml.so.6:_ZThn16_N21QScxmlEventConnection10classBeginEv
 libQt6ScxmlQml.so.6:_ZThn16_N21QScxmlEventConnection17componentCompleteEv
 libQt6ScxmlQml.so.6:_ZThn16_N21QScxmlInvokedServices10classBeginEv
 libQt6ScxmlQml.so.6:_ZThn16_N21QScxmlInvokedServices17componentCompleteEv
+libQt6StateMachine.so.6:NonQt
 libQt6StateMachine.so.6:Qt_6
 libQt6StateMachine.so.6:Qt_6_PRIVATE_API
 libQt6StateMachine.so.6:_ZN11QFinalState11qt_metacallEN11QMetaObject4CallEiPPv
@@ -828,6 +831,7 @@ libQt6StateMachine.so.6:_ZNK6QState10metaObjectEv
 libQt6StateMachine.so.6:_ZNK6QState11transitionsEv
 libQt6StateMachine.so.6:_ZNK6QState12initialStateEv
 libQt6StateMachine.so.6:_ZNK6QState9childModeEv
+libQt6StateMachineQml.so.6:NonQt
 libQt6StateMachineQml.so.6:Qt_6
 libQt6StateMachineQml.so.6:Qt_6_PRIVATE_API
 libQt6StateMachineQml.so.6:_Z37qml_register_types_QtQml_StateMachinev
