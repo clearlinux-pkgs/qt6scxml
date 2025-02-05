@@ -7,7 +7,7 @@
 #
 Name     : qt6scxml
 Version  : 6.8.2
-Release  : 23
+Release  : 24
 URL      : https://download.qt.io/official_releases/qt/6.8/6.8.2/submodules/qtscxml-everywhere-src-6.8.2.zip
 Source0  : https://download.qt.io/official_releases/qt/6.8/6.8.2/submodules/qtscxml-everywhere-src-6.8.2.zip
 Summary  : No detailed summary available
@@ -76,7 +76,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1738707768
+export SOURCE_DATE_EPOCH=1738729533
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -139,7 +139,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1738707768
+export SOURCE_DATE_EPOCH=1738729533
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6scxml
 cp %{_builddir}/qtscxml-everywhere-src-%{version}/LICENSES/Apache-2.0.txt %{buildroot}/usr/share/package-licenses/qt6scxml/1c619b057a9bf7a8234b3105fcfb5b375e749db1 || :
